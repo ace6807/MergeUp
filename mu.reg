@@ -1,0 +1,5 @@
+Windows Registry Editor Version 5.00
+[HKEY_CLASSES_ROOT\Directory\shell\MergeUp]
+@="Merge Up"
+[HKEY_CLASSES_ROOT\Directory\shell\MergeUp\command]
+@="C:\\Windows\\pyw.exe C:\\Users\\Andrew\\Documents\\merge_up.py %1"
