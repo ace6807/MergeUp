@@ -4,3 +4,4 @@ TODO:
 Context menu entry for Linux
 Installer
 Number appended to duplicate filename could be nicer
+
