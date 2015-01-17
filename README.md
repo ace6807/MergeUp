@@ -5,4 +5,4 @@ TODO:
 - Context menu entry for Linux
 - Installer
 - Number appended to duplicate filename could be nicer
-
+- Fix filename collision starting with a '.' -> 9.filename.txt
