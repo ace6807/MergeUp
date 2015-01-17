@@ -27,16 +27,18 @@ def merge(path, master_folder):
 
 def move_file_to_master(path, master_folder):
     split_path = os.path.split(path)
-    src_path = split_path[0]
     filename = split_path[1]
     split_filename = filename.split(".")
     basename = split_filename[0]
-    file_extension = split_filename[1]
+    file_extension = ""
 
-    while os.path.isfile(master_folder + slash + basename + "." + file_extension):
+    for i in split_filename[1:]:
+        file_extension += "." + i
+
+    while os.path.isfile(master_folder + slash + basename + file_extension):
         basename += "9"
 
-    new_file = master_folder + slash + basename + "." + file_extension
+    new_file = master_folder + slash + basename + file_extension
     os.rename(path, new_file)
 
 slash = '\\' if sys.platform.startswith('win') else '/'
